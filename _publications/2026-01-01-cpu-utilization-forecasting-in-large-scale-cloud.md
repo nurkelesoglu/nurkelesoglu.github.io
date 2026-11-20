@@ -2,6 +2,7 @@
 title: "CPU Utilization Forecasting in Large-Scale Cloud Clusters Using Gradient Boosting"
 collection: publications
 category: conferences
+badge: Poster
 permalink: /publication/2026-01-01-cpu-utilization-forecasting-in-large-scale-cloud
 excerpt: 'N. Keleşoğlu, Ł. Sobczak, J. Domańska'
 date: 2026-01-01

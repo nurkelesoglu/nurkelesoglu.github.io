@@ -772,3 +772,89 @@ body {
     object-fit: cover;
   }
 }
+
+/*
+   Sidebar: let long labels wrap instead of overflowing
+   ========================================================================== */
+
+.sidebar {
+  overflow-x: hidden;
+}
+
+@include breakpoint($large) {
+  .author__urls li {
+    white-space: normal;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.35em;
+    margin-bottom: 0.45em;
+    line-height: 1.4;
+
+    > i,
+    > a > i {
+      flex: 0 0 auto;
+      margin-top: 0.22em;
+    }
+
+    > a {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.35em;
+    }
+  }
+
+  .author__urls .icon-pad-right {
+    padding-right: 0;
+  }
+}
+
+/*
+   Publication type badge (top-right corner of the card)
+   ========================================================================== */
+
+.archive > .list__item > .archive__item--badged {
+  position: relative;
+
+  @include breakpoint($medium) {
+    .archive__item-title {
+      padding-right: 7.5rem;
+    }
+  }
+}
+
+.pub-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.22rem 0.65rem;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--badge-fg);
+  background: var(--badge-bg);
+  border-color: var(--badge-border);
+
+  @include breakpoint($medium) {
+    position: absolute;
+    top: 1rem;
+    right: 1.1rem;
+    margin-bottom: 0;
+  }
+}
+
+.pub-badge--journal    { --badge-bg: #e0e7ff; --badge-fg: #3730a3; --badge-border: #c7d2fe; }
+.pub-badge--conference { --badge-bg: #ccfbf1; --badge-fg: #115e59; --badge-border: #99f6e4; }
+.pub-badge--poster     { --badge-bg: #fef3c7; --badge-fg: #92400e; --badge-border: #fde68a; }
+.pub-badge--report     { --badge-bg: #fce7f3; --badge-fg: #9d174d; --badge-border: #fbcfe8; }
+.pub-badge--research-article { --badge-bg: #dcfce7; --badge-fg: #166534; --badge-border: #bbf7d0; }
+
+html[data-theme="dark"] {
+  .pub-badge--journal    { --badge-bg: rgba(129, 140, 248, 0.18); --badge-fg: #c7d2fe; --badge-border: rgba(129, 140, 248, 0.35); }
+  .pub-badge--conference { --badge-bg: rgba(45, 212, 191, 0.16); --badge-fg: #99f6e4; --badge-border: rgba(45, 212, 191, 0.35); }
+  .pub-badge--poster     { --badge-bg: rgba(251, 191, 36, 0.16); --badge-fg: #fde68a; --badge-border: rgba(251, 191, 36, 0.35); }
+  .pub-badge--report     { --badge-bg: rgba(244, 114, 182, 0.16); --badge-fg: #fbcfe8; --badge-border: rgba(244, 114, 182, 0.35); }
+  .pub-badge--research-article { --badge-bg: rgba(74, 222, 128, 0.16); --badge-fg: #bbf7d0; --badge-border: rgba(74, 222, 128, 0.35); }
+}

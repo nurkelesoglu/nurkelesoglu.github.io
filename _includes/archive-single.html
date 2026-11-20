@@ -12,8 +12,21 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% if post.collection == 'publications' %}
+  {% assign badge = post.badge %}
+  {% unless badge %}
+    {% case post.category %}
+      {% when 'manuscripts' %}{% assign badge = 'Journal' %}
+      {% when 'conferences' %}{% assign badge = 'Conference' %}
+      {% else %}{% assign badge = 'Report' %}
+    {% endcase %}
+  {% endunless %}
+  {% assign badge_class = badge | downcase | replace: ' ', '-' %}
+{% endif %}
+
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item{% if badge %} archive__item--badged{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if badge %}<span class="pub-badge pub-badge--{{ badge_class }}">{{ badge }}</span>{% endif %}
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=

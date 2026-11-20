@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Research Assistant · Generative AI, Neuro-Symbolic AI & Network Intelligence"
   location         : "Gliwice, Poland"
-  employer         : "IITiS PAN, Polish Academy of Sciences"
+  employer         : "Institute of Theoretical and Applied Informatics, Polish Academy of Sciences"
   uri              : "https://www.iitis.pl/en/node/3512"
   email            : 
 
@@ -127,7 +127,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
