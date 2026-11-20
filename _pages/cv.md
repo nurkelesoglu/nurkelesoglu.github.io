@@ -76,6 +76,11 @@ Datasets
 * **User Query Dataset** – user queries for developing knowledge-graph-grounded multimodal explanations for trustworthy time-series forecasting in DevOps systems. [Zenodo](https://zenodo.org/records/21495764)
 * **ZigBeeNet** – decrypted ZigBee IoT network traffic collected from 15 devices in a smart-home environment over 20 days. [Zenodo](https://zenodo.org/records/13957307)
 
+Other
+======
+
+* Drone operator since August 2020 – aerial videography, published on [YouTube](https://www.youtube.com/@nurkelesoglu)
+
 Profiles
 ======
 
