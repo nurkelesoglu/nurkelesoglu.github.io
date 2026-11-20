@@ -11,54 +11,72 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
 
-Work experience
+<ul class="timeline">
+  <li>
+    <span class="timeline__date">2020 – 2023</span>
+    <span class="timeline__title">M.Sc. in Electrical and Electronics Engineering</span>
+    <span class="timeline__meta">Yaşar University, İzmir, Türkiye</span>
+  </li>
+  <li>
+    <span class="timeline__date">2015 – 2020</span>
+    <span class="timeline__title">B.Sc. in Electrical and Electronics Engineering</span>
+    <span class="timeline__meta">Yaşar University, İzmir, Türkiye</span>
+  </li>
+</ul>
+
+Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<ul class="timeline">
+  <li>
+    <span class="timeline__date">2023 – present</span>
+    <span class="timeline__title">Research Assistant</span>
+    <span class="timeline__meta">Institute of Theoretical and Applied Informatics, Polish Academy of Sciences (IITiS PAN), Gliwice, Poland</span>
+  </li>
+  <li>
+    <span class="timeline__date">2022</span>
+    <span class="timeline__title">Data Scientist Intern</span>
+    <span class="timeline__meta">FabMetrics, İstanbul, Türkiye</span>
+  </li>
+  <li>
+    <span class="timeline__date">2021 – 2022</span>
+    <span class="timeline__title">Teaching Assistant</span>
+    <span class="timeline__meta">Yaşar University, İzmir, Türkiye</span>
+  </li>
+</ul>
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+Research interests
+======
+
+* Generative AI &amp; Large Language Models: LLM-based data generation, multi-agent systems, trustworthy AI
+* Neuro-symbolic AI: knowledge-graph-enhanced LLMs, semantic reasoning, knowledge-grounded generation
+* Cybersecurity &amp; network intelligence: intrusion detection, network traffic analysis, AI-driven security monitoring
+* IoT &amp; wireless networks: LoRaWAN, ZigBee, LPWAN, machine learning for wireless systems
+* Robotics &amp; human-robot interaction: LLM-powered robots, socially assistive robots, risk-aware communication
+* Explainable AI: anomaly detection, risk-aware AI, interpretable machine learning
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+
+* **Programming &amp; data science:** Python, NumPy, Pandas, scikit-learn, SQL
+* **AI &amp; knowledge representation:** Large Language Models, Knowledge Graphs, Neuro-Symbolic AI, Multi-Agent Systems, MCP, RAG
+* **Networking &amp; IoT:** ZigBee, LoRaWAN, LPWAN, network traffic analysis
 
 Publications
 ======
+
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
+
+Datasets
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
+
+* **User Query Dataset** – user queries for developing knowledge-graph-grounded multimodal explanations for trustworthy time-series forecasting in DevOps systems. [Zenodo](https://zenodo.org/records/21495764)
+* **ZigBeeNet** – decrypted ZigBee IoT network traffic collected from 15 devices in a smart-home environment over 20 days. [Zenodo](https://zenodo.org/records/13957307)
+
+Profiles
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
+* [ORCID](https://orcid.org/0000-0002-0306-7281) · [GitHub](https://github.com/nkelesoglu) · [LinkedIn](https://www.linkedin.com/in/nurkelesoglu/) · [IITiS PAN research profile](https://www.iitis.pl/en/node/3512)

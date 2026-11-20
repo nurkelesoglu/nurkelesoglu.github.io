@@ -1,0 +1,68 @@
+/* ==========================================================================
+    MODERN THEME - LIGHT VERSION
+    A calm, contemporary palette with a single indigo accent.
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #4f46e5;
+$gray                       : #6b7280;
+$dark-gray                  : #1f2937;
+$darker-gray                : #111827;
+$light-gray                 : #6b7280;
+$lighter-gray               : #e5e7eb;
+
+/* Color codes used for the site */
+$danger-color               : #ef4444;
+$info-color                 : #4f46e5;
+$notice-color               : #6b7280;
+$success-color              : #10b981;
+$warning-color              : #f59e0b;
+
+/* Typography overrides (Inter is loaded in _includes/head/custom.html) */
+$sans-serif                 : "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$sans-serif-narrow          : $sans-serif;
+$global-font-family         : $sans-serif;
+$header-font-family         : $sans-serif;
+
+/* Other basic settings for the template */
+$border-radius              : 12px;
+$box-shadow                 : 0 1px 2px rgba(15, 23, 42, 0.06);
+$global-transition          : all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Default light theme for the site */
+:root {
+    color-scheme: light;
+
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #fafafa;
+    --global-footer-bg-color            : #f3f4f6;
+    --global-border-color               : #{$lighter-gray};
+    --global-dark-border-color          : #d1d5db;
+    --global-code-background-color      : #f3f4f6;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : #{$gray};
+    --global-link-color                 : #4338ca;
+    --global-link-color-hover           : #312e81;
+    --global-link-color-visited         : #5b21b6;
+    --global-masthead-link-color        : #374151;
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$dark-gray};
+    --global-text-color-light           : #{$gray};
+    --global-thead-color                : #f3f4f6;
+
+    /* Extra tokens used by layout/_modern.scss */
+    --global-surface-color              : #ffffff;
+    --global-surface-hover-color        : #ffffff;
+    --global-accent-color               : #{$primary-color};
+    --global-accent-soft-color          : #eef2ff;
+    --global-accent-contrast-color      : #ffffff;
+    --global-masthead-bg-color          : rgba(250, 250, 250, 0.82);
+    --global-shadow-color               : rgba(15, 23, 42, 0.08);
+    --global-shadow-strong-color        : rgba(15, 23, 42, 0.14);
+    --global-hero-gradient              : linear-gradient(135deg, rgba(79, 70, 229, 0.10), rgba(14, 165, 233, 0.08));
+}
