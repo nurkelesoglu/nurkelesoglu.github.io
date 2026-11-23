@@ -7,8 +7,48 @@ author_profile: true
 
 {% include base_path %}
 
-<p class="archive__subtitle">Newest first. The full list is also on <a href="https://orcid.org/0000-0002-0306-7281">ORCID</a> and the <a href="https://www.iitis.pl/en/people/person/nkelesoglu/publications">IITiS PAN profile</a>.</p>
+{% if site.author.googlescholar %}
+<p class="archive__subtitle"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i> You can also find my articles on my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.</p>
+{% endif %}
+
+<div class="pub-filter" role="group" aria-label="Filter publications by type">
+  <button type="button" class="pub-filter__btn is-active" data-filter="all">All</button>
+  <button type="button" class="pub-filter__btn pub-filter__btn--journal" data-filter="journal">Journal</button>
+  <button type="button" class="pub-filter__btn pub-filter__btn--conference" data-filter="conference">Conference</button>
+  <button type="button" class="pub-filter__btn pub-filter__btn--poster" data-filter="poster">Poster</button>
+  <button type="button" class="pub-filter__btn pub-filter__btn--other" data-filter="other">Other</button>
+</div>
 
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+<p class="pub-filter__empty" hidden>No publications of this type yet.</p>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.pub-filter__btn');
+    var items = document.querySelectorAll('.archive .list__item[data-pubtype]');
+    var empty = document.querySelector('.pub-filter__empty');
+    function apply(type) {
+      var shown = 0;
+      items.forEach(function (item) {
+        var match = type === 'all' || item.getAttribute('data-pubtype') === type;
+        item.hidden = !match;
+        if (match) { shown++; }
+      });
+      if (empty) { empty.hidden = shown > 0; }
+      buttons.forEach(function (b) {
+        var active = b.getAttribute('data-filter') === type;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      try { history.replaceState(null, '', type === 'all' ? location.pathname : '#' + type); } catch (e) {}
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-filter')); });
+    });
+    var initial = (location.hash || '').replace('#', '');
+    apply(document.querySelector('.pub-filter__btn[data-filter="' + initial + '"]') ? initial : 'all');
+  })();
+</script>

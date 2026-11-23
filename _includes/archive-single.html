@@ -18,13 +18,13 @@
     {% case post.category %}
       {% when 'manuscripts' %}{% assign badge = 'Journal' %}
       {% when 'conferences' %}{% assign badge = 'Conference' %}
-      {% else %}{% assign badge = 'Report' %}
+      {% else %}{% assign badge = 'Other' %}
     {% endcase %}
   {% endunless %}
   {% assign badge_class = badge | downcase | replace: ' ', '-' %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<div class="{{ include.type | default: "list" }}__item"{% if badge %} data-pubtype="{{ badge_class }}"{% endif %}>
   <article class="archive__item{% if badge %} archive__item--badged{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if badge %}<span class="pub-badge pub-badge--{{ badge_class }}">{{ badge }}</span>{% endif %}
     {% if include.type == "grid" and teaser %}
